@@ -16,6 +16,9 @@ import org.springframework.cache.annotation.EnableCaching;
 public class SellApplication {
 
     public static void main(String[] args) {
+        /**
+         * 修改
+         */
         log.error("【错误日志】");
         log.error("【错误日志】");
         log.error("【错误日志】");

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--com.imooc.sell.dataobject.mapper.ProductCategoryMapper  mapper所在路径-->
+<mapper namespace="com.imooc.sell.dataobject.mapper.ProductCategoryMapper">
+    <!-- id="BaseResultMap ":自定义，
+    type="com.imooc.sell.dataobject.ProductCategory":与数据库对应的对象
+    -->
+    <resultMap id="BaseResultMap" type="com.imooc.sell.dataobject.ProductCategory">
+<!--id 表示主键, column:数据库字段名，property：映射的变量，jdbcType：类型-->
+        <id column="category_id"   property="categoryId" jdbcType="INTEGER"/>
+        <id column="category_name" property="categoryName" jdbcType="VARCHAR"/>
+        <id column="category_type" property="categoryType" jdbcType="INTEGER"/>
+    </resultMap>
+    <!--id ：mapper中的方法名  resultMap:上面id类型  parameterType:【如果是对象则传对象的路径】-->
+    <select id="selectByCategoryType" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select category_id, category_name, category_type
+        from product_category
+        where category_type = #{categoryType, jdbcType=INTEGER}
+    </select>
+</mapper>

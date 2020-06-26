@@ -1,0 +1,4 @@
+# 默认启动  本地 --dev
+spring:
+  profiles:
+    active: dev

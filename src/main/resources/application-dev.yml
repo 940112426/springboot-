@@ -1,0 +1,36 @@
+# 4-1-b:数据库配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    # //192.168.0.105 虚拟机地址 sell：数据库名  useSSL：不配置则非ssl会报警告
+    url: jdbc:mysql://192.168.0.107/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+    #显示数据库操作语句
+#    show-sql: true
+  redis:
+    host: 192.168.0.107   #虚拟机地址
+    port: 6379
+  #    password:  没有密码不用配，有密码则需要
+  jackson:
+    # 空字段不返回
+    default-property-inclusion: non_null
+#访问前缀
+service:
+  content-path: /sell
+wechat:
+  mpAppId: wxd898fcb01713c658
+  mpAppSecret: 47ccc303338cee6e62894fxxxxxxxxxxx
+
+  # mybatis显示mysql
+logging:
+  level:
+    com.imooc.sell.dataobject.mapper: trace
+
+    #配置mapper.xml  classpath:为src/main/resources
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

@@ -1,0 +1,7 @@
+2020-06-18 22:05:44.311  INFO 19588 --- [main] com.imooc.sell.LoggerTest                : Starting LoggerTest on DESKTOP-MVQUR86 with PID 19588 (started by 94011 in F:\XMY\idea_project\sell)
+2020-06-18 22:05:44.314  INFO 19588 --- [main] com.imooc.sell.LoggerTest                : No active profile set, falling back to default profiles: default
+2020-06-18 22:05:47.883  INFO 19588 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-18 22:05:48.713  INFO 19588 --- [main] com.imooc.sell.LoggerTest                : Started LoggerTest in 5.537 seconds (JVM running for 7.679)
+2020-06-18 22:05:49.191 ERROR 19588 --- [main] com.imooc.sell.LoggerTest                : error...
+2020-06-18 22:05:49.192  INFO 19588 --- [main] com.imooc.sell.LoggerTest                : name:immc, password:123456
+2020-06-18 22:05:49.213  INFO 19588 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
